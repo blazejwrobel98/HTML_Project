@@ -1,13 +1,22 @@
+body{
+    margin: 0 0 0 0;
+}
 @media (min-width: 1281px) {
     .header {
         background-color: black;
-        height: 65px;
+        height: 70px;
+        margin-top: 0;
     }
 
         .header a {
             background-color: transparent;
             text-decoration: none;
             color: #fff;
+        }
+        .header li:hover{
+            background-color: darkgrey;
+            opacity:0.9;
+            border: hidden;
         }
 
         .header li {
@@ -25,6 +34,14 @@
             right: 0;
             top: 0;
             margin-right: 20px;
+        }
+        .header h1 {
+            color: #fff;
+            margin-top: auto;
+            margin-bottom: 0;
+            font: inherit;
+            font-size: 2em;
+            padding: 20px 0 10px 50px;
         }
 }
 /*
