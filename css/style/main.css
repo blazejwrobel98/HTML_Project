@@ -1,17 +1,18 @@
-body{
+body {
     margin: 0 0 0 0;
     overflow: hidden;
+    height: 100%;
+    background-color: #e3e1e1;
 }
 @media (min-width: 1281px) {
-    header {
-        background-color: black;
-        height: 70px;
-        margin-top: 0;
-    }
+        header {
+            height: 70px;
+            margin-top: 0;
+        }
         header a {
             background-color: transparent;
             text-decoration: none;
-            color: #fff;
+            color: black;
         }
         header li:hover{
             background-color: darkgrey;
@@ -19,24 +20,21 @@ body{
             border: hidden;
             cursor: pointer;
         }
-
         header li {
             list-style-type: none;
             float: left;
-            color: #fff;
             display: block;
             opacity: 1;
             font: inherit;
         }
-
         header nav {
             position: absolute;
             right: 0;
             top: 0;
             margin-right: 40px;
+            vertical-align: bottom;
         }
         header h1 {
-            color: #fff;
             margin-top: auto;
             margin-bottom: 0;
             font: inherit;
@@ -49,10 +47,14 @@ body{
             margin: -20% 0;
         }
         .content {
-            height: 645px;
+            height: 500px;
             overflow: hidden;
             margin: 0;
             margin-bottom:0;
+            background-image:url("../../assets/pictures/view.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 85%;
         }
         .break hr{
             margin: 0 0 0 0;
@@ -60,28 +62,12 @@ body{
             border-style: solid;
             opacity: 0.5;
         }
-        .content .content-watermark {
-            position: absolute;
-            width: 80%;
-            height: 450px;
-            background-color: darkgray;
-            opacity: 0.8;
-            margin: 5% 10% auto 10%;
-        }
-        .content .content-watermark h2{
-            color: #000;
-            margin-top: auto;
-            margin-bottom: 0;
-            font: inherit;
-            font-size: 2em;
-            text-align: center;
-            padding:1%;
-        }
-        header nav span {
-            height: 100%;
-            width: 100%;
-            padding: 25px 20px 10px 20px;
-        }
+    header nav span {
+        height: 100%;
+        width: 100%;
+        padding: 25px 20px 10px 20px;
+        vertical-align: bottom;
+    }
 }
 /*
 ##Device = Laptops, Desktops
