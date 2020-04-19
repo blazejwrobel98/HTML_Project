@@ -5,20 +5,16 @@ body {
     background-color: #e3e1e1;
 }
 @media (min-width: 1281px) {
+        /*body header*/
         header {
             height: 70px;
             margin-top: 0;
+            background-color: white;
         }
         header a {
             background-color: transparent;
             text-decoration: none;
             color: black;
-        }
-        header li:hover{
-            background-color: darkgrey;
-            opacity:0.9;
-            border: hidden;
-            cursor: pointer;
         }
         header li {
             list-style-type: none;
@@ -27,34 +23,37 @@ body {
             opacity: 1;
             font: inherit;
         }
+        header li:hover{
+            background-color: darkgrey;
+            opacity:0.9;
+            border: hidden;
+            cursor: pointer;
+        }
         header nav {
-            position: absolute;
-            right: 0;
-            top: 0;
-            margin-right: 40px;
+            margin: 1.75% auto 0 25%;
+            float: left;
+        }
+        header p {
+            float: left;
+            margin: 1% auto 0 20%;
+            padding: 20px 0 10px 50px;
+            font-family: inherit;
+            font-size: 1.25em;
+            font-weight: 600;
+        }
+        header nav span {
+            height: 100%;
+            width: 100%;
+            padding: 25px 20px 10px 20px;
             vertical-align: bottom;
         }
-        header h1 {
-            margin-top: auto;
-            margin-bottom: 0;
-            font: inherit;
-            font-size: 2em;
-            padding: 20px 0 10px 50px;
-        }
-        .content img {
-            width: 100%;
-            display: block;
-            margin: -20% 0;
-        }
+        /*-end-*/
+        /*body .content*/
         .content {
-            height: 500px;
-            overflow: hidden;
+            height: 600px;
             margin: 0;
             margin-bottom:0;
-            background-image:url("../../assets/pictures/view.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position-y: 85%;
+            background-color: #404248;
         }
         .break hr{
             margin: 0 0 0 0;
@@ -62,12 +61,7 @@ body {
             border-style: solid;
             opacity: 0.5;
         }
-    header nav span {
-        height: 100%;
-        width: 100%;
-        padding: 25px 20px 10px 20px;
-        vertical-align: bottom;
-    }
+        /*-end-*/
 }
 /*
 ##Device = Laptops, Desktops
