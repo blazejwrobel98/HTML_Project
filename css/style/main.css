@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 body {
     margin: 0 0 0 0;
     overflow: hidden;
     height: 100%;
-    background-color: #e3e1e1;
+    background-color: lightblue;
+    font-family: 'Indie Flower', cursive;
 }
 @media (min-width: 1281px) {
         /*body header*/
         header {
             height: 70px;
             margin-top: 0;
-            background-color: white;
         }
         header a {
             background-color: transparent;
@@ -30,15 +31,14 @@ body {
             cursor: pointer;
         }
         header nav {
-            margin: 1.75% auto 0 25%;
+            margin: 30px auto 0 25%;
             float: left;
+            font-weight:600;
         }
         header p {
             float: left;
-            margin: 1% auto 0 20%;
-            padding: 20px 0 10px 50px;
-            font-family: inherit;
-            font-size: 1.25em;
+            margin: 20px auto 0 15%;
+            font-size: 3em;
             font-weight: 600;
         }
         header nav span {
