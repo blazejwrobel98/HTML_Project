@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 body {
     margin: 0 0 0 0;
     overflow: hidden;
     height: 100%;
-    background-color: lightblue;
-    font-family: 'Indie Flower', cursive;
+    background-color: lightslategrey;
+    font-family: Courier New;
 }
 @media (min-width: 1281px) {
         /*body header*/
         header {
-            height: 70px;
+            height: 80px;
             margin-top: 0;
         }
         header a {
@@ -24,11 +23,8 @@ body {
             opacity: 1;
             font: inherit;
         }
-        header li:hover{
-            background-color: darkgrey;
-            opacity:0.9;
-            border: hidden;
-            cursor: pointer;
+        .active{
+            background-color: lightgreen;
         }
         header nav {
             margin: 30px auto 0 25%;
@@ -41,11 +37,21 @@ body {
             font-size: 3em;
             font-weight: 600;
         }
-        header nav span {
-            height: 100%;
+        .menu {
+            height: 100px;
             width: 100%;
-            padding: 25px 20px 10px 20px;
+            padding: 10px 10px 0px 10px;
             vertical-align: bottom;
+        }
+        .grow:hover{
+            transition: 1s;
+            padding: 9px 0px 0px 0px;
+        }
+        .menu:hover{
+            background-color: darkgrey;
+            opacity:0.9;
+            border: hidden;
+            cursor: pointer;
         }
         /*-end-*/
         /*body .content*/
@@ -53,13 +59,20 @@ body {
             height: 600px;
             margin: 0;
             margin-bottom:0;
-            background-color: #404248;
+            background-color: lightgray;
+            padding: 5px 10px 0px 10px;
         }
         .break hr{
             margin: 0 0 0 0;
             border-width:5px;
             border-style: solid;
             opacity: 0.5;
+        }
+        .content video {
+            height: 480px;
+            width: 640px;
+            display: block;
+            margin: 0 auto;
         }
         /*-end-*/
 }
