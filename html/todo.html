@@ -66,19 +66,44 @@
         </nav>
     </header>
     <div class="content">
-        <dl>
-            <dt>Strona internetowa z minimum 4 podstronami</dt>
-            <dt>Struktura folderów i plików powinna być przejżysta i jasna</dt>
-            <dt>Strona musi być responsywna</dt>
-            <dt>W menu przy każdej pozycji powinien znajdować się odpowiedni obrazek w formacie svg</dt>
-            <dt>Na jednej z podstron umieścić film przy pomocy tagu <b>video</b></dt>
-            <dt>Każda z pozycji menu powinna mieć odmienne stany w zależności od akcji</dt>
-                <dd>a. wyjściowy</dd>
-                <dd>b. po najechaniu (animacja)</dd>
-                <dd>c. przebywanie na danej podstronie</dd>
-            <dt>Na jednej z podstron powinna znajdować się lista ToDo do której będzie można dodawać elementy, usuwać dowolne elementy,
+        <dl id="todolist">
+            <dt><input type="checkbox" name="del" value=1>Strona internetowa z minimum 4 podstronami</dt>
+            <dt><input type="checkbox" name="del" value=2>Struktura folderów i plików powinna być przejżysta i jasna</dt>
+            <dt><input type="checkbox" name="del" value=3>Strona musi być responsywna</dt>
+            <dt><input type="checkbox" name="del" value=4>W menu przy każdej pozycji powinien znajdować się odpowiedni obrazek w formacie svg</dt>
+            <dt><input type="checkbox" name="del" value=5>Na jednej z podstron umieścić film przy pomocy tagu <b>video</b></dt>
+            <dt><input type="checkbox" name="del" value=6>Każda z pozycji menu powinna mieć odmienne stany w zależności od akcji</dt>
+            <dt><input type="checkbox" name="del" value=7>a. wyjściowy</dt>
+            <dt><input type="checkbox" name="del" value=8>b. po najechaniu (animacja)</dt>
+            <dt><input type="checkbox" name="del" value=9>c. przebywanie na danej podstronie</dt>
+            <dt><input type="checkbox" name="del" value=10>Na jednej z podstron powinna znajdować się lista ToDo do której będzie można dodawać elementy, usuwać dowolne elementy,
                     modyfikować dowolne elementy</dt>
         </dl>
+        <input type="submit" class="button_input" value="USUŃ WYBRANE" id="rm_sub"><input type="text" id="add" placeholder="Dodaj element" class="text_input"/><input type="submit" class="button_input" value="DODAJ" id="add_sub">
+        
+        <script>
+            document.getElementById('add_sub').onclick = function () {
+                var input = document.getElementById('add').value;
+                var target = document.getElementById('todolist');
+                var counter = document.getElementsByName('del').length;
+                counter++;
+                target.innerHTML += '<dt><input type="checkbox" name="del" value='+counter+'>'+ input + '</dt>';
+            };
+            document.getElementById('rm_sub').onclick = function () {
+                const checkboxes = document.querySelectorAll('input[name="del"]:checked');
+                let dels = [];
+                checkboxes.forEach((checkbox) => {
+                    dels.push(checkbox.value);
+                });
+                dels.forEach(Remove)
+            };
+            function Remove(item) {
+                var list = document.getElementById("todolist").children;
+                list[item].remove();
+                //this.element.find('todolist').children().eq(item).remove();
+                //alert(list.removeChild(list.childNodes[item]));
+            };
+        </script>
     </div>
 </body>
 </html>
