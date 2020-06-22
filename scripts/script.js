@@ -10,9 +10,22 @@
     var target = document.getElementById('todolist');
     todo_list.forEach(function (item) {
         var counter = document.getElementsByName('del').length;
-        target.innerHTML += '<dt><input type="checkbox" name="del" value=' + counter + '>' + item + '</dt>';
+        target.innerHTML += '<dt name="todolist_dt" id='+counter+'><input type="button" class="edit" value="EDIT" onclick="Edit(' + counter + ');"><input type="checkbox" name="del" value=' + counter + '>' + item + '</dt>';
         counter++;
     });
+}
+function Edit(val) {
+    var items = document.querySelectorAll('dt[name="todolist_dt"]');
+    let dels = [];
+    items.forEach((checkbox) => {
+        dels.push(checkbox.value);
+    });
+    var item = items[val].innerText;
+    document.getElementById(val).innerHTML = '<dt name="todolist_dt" id=' + val + '><input type="text" id="edited" value="' + item + '"><input type="button" class="edit" value="SAVE" onclick="EditValue('+val+');"></dt>';
+}
+function EditValue(val) {
+    var item = document.getElementById("edited").value;
+    document.getElementById(val).innerHTML = '<dt name="todolist_dt" id=' + val + '><input type="button" class="edit" value="EDIT" onclick="Edit(' + val + ');"><input type="checkbox" name="del" value=' + val + '>' + item + '</dt>';
 }
 function AddItem() {
     var input = document.getElementById('add').value;

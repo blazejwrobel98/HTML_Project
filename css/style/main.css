@@ -104,6 +104,9 @@ body {
             position: fixed;
             bottom:1em;
          }
+        .edit{
+            font-size:12px;
+        }
         /*-end-*/
 }
 /*
