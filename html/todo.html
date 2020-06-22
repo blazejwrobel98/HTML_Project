@@ -37,7 +37,7 @@
                         <span class="menu">
                             <svg width="20px" height="20px">
                                 <image xlink:href="../assets/pictures/latest.svg" height="20px" width="20px" />
-                            </svg> 
+                            </svg>
                             Latest Work
                         </span>
                     </a>
@@ -66,10 +66,66 @@
         </nav>
     </header>
     <div class="content">
-        <dl id="todolist">
-            
-        </dl>
-        <input type="submit" class="button_input" value="USUŃ WYBRANE" onclick="RemoveItem();"><input type="text" id="add" placeholder="Dodaj element" class="text_input"/><input type="submit" class="button_input" value="DODAJ" onclick="AddItem();" >
+        <p>TODO list:</p>
+        <div class="content-width">
+            <dl id="todolist">
+            </dl>
+            <input type="submit" class="button_input" value="USUŃ WYBRANE" onclick="RemoveItem();"><input type="text" id="add" placeholder="Dodaj element" class="text_input" /><input type="submit" class="button_input" value="DODAJ" onclick="AddItem();">
+        </div>
     </div>
+    <footer>
+        <ul>
+            <li class="grow">
+                <a href="./index.html">
+                    <span class="menu ">
+                        <svg width="20px" height="20px">
+                            <image xlink:href="../assets/pictures/home.svg" height="20px" width="20px" />
+                        </svg>
+                        Home
+                    </span>
+                </a>
+            </li>
+            <li class="grow">
+                <a href="./html/todo.html">
+                    <span class="menu active">
+                        <svg width="20px" height="20px">
+                            <image xlink:href="../assets/pictures/todo.svg" height="20px" width="20px" />
+                        </svg>
+                        TODO
+                    </span>
+                </a>
+            </li>
+            <li class="grow">
+                <a href="./html/latest.html">
+                    <span class="menu">
+                        <svg width="20px" height="20px">
+                            <image xlink:href="../assets/pictures/latest.svg" height="20px" width="20px" />
+                        </svg>
+                        Latest Work
+                    </span>
+                </a>
+            </li>
+            <li class="grow">
+                <a href="./html/about.html">
+                    <span class="menu">
+                        <svg width="20px" height="20px">
+                            <image xlink:href="../assets/pictures/about.svg" height="20px" width="20px" />
+                        </svg>
+                        About Me
+                    </span>
+                </a>
+            </li>
+            <li class="grow">
+                <a href="./html/contact.html">
+                    <span class="menu">
+                        <svg width="20px" height="20px">
+                            <image xlink:href="../assets/pictures/contact.svg" height="20px" width="20px" />
+                        </svg>
+                        Contact
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>

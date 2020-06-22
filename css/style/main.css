@@ -11,12 +11,12 @@ body {
             height: 80px;
             margin-top: 0;
         }
-        header a {
+        header a,footer a {
             background-color: transparent;
             text-decoration: none;
             color: black;
         }
-        header li {
+        header li,footer li {
             list-style-type: none;
             float: left;
             display: block;
@@ -27,13 +27,15 @@ body {
             background-color: lightgreen;
         }
         header nav {
-            margin: 30px auto 0 25%;
-            float: left;
-            font-weight:600;
+            margin: 30px;
+            float: right;
+            font-weight: 600;
+            justify-content: flex-start;
+            display: flex;
         }
         header p {
             float: left;
-            margin: 20px auto 0 15%;
+            margin: 20px auto 0 10%;
             font-size: 3em;
             font-weight: 600;
         }
@@ -65,7 +67,7 @@ body {
         /*body .content*/
         .content {
             height: 600px;
-            margin: 0 5% 0 5%;
+            margin: 0;
             margin-bottom:0;
             background-color: lightgray;
             padding: 5px 10px 0px 10px;
@@ -80,17 +82,150 @@ body {
             height: 480px;
             width: 640px;
             display: block;
-            margin: 0 auto;
+            margin: 0 auto auto auto;
         }
+        .content-width{
+            margin:0 5% 0 5%;
+        }
+        .picture{
+            width:250px;
+            height:275px;
+            position: relative;
+            float: left;
+        }
+        .tekst{
+            float: left;
+            width: 70%;
+            height: 450px;
+            margin:2% 1% 1% 1%;
+            overflow: auto;
+        }
+        footer{
+            position: fixed;
+            bottom:1em;
+         }
         /*-end-*/
 }
 /*
-##Device = Laptops, Desktops
 ##Screen = B/w 1025px to 1280px
 */
-
 @media (min-width: 1025px) and (max-width: 1280px) {
-    //CSS
+    /*body header*/
+    header {
+        height: 80px;
+        margin-top: 0;
+    }
+
+    header a, footer a {
+        background-color: transparent;
+        text-decoration: none;
+        color: black;
+    }
+
+    header li, footer li {
+        list-style-type: none;
+        float: left;
+        display: block;
+        opacity: 1;
+        font: inherit;
+    }
+
+    .active {
+        background-color: lightgreen;
+    }
+
+    header nav {
+        margin: 30px;
+        float: right;
+        font-weight: 600;
+        justify-content: flex-start;
+        display: flex;
+    }
+    header p {
+        float: left;
+        margin: 20px auto 0 3%;
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    .menu {
+        height: 100px;
+        width: 100%;
+        padding: 10px 10px 0px 10px;
+        vertical-align: bottom;
+    }
+
+    .grow:hover {
+        transition: 1s;
+        padding: 9px 0px 0px 0px;
+    }
+
+    .menu:hover {
+        background-color: darkgrey;
+        opacity: 0.9;
+        border: hidden;
+        cursor: pointer;
+    }
+
+    .text_input {
+        width: 300px;
+        height: 20px;
+    }
+
+    .button_input {
+        height: 25px;
+        min-width: 80px;
+    }
+    /*-end-*/
+    /*body .content*/
+    .content {
+        height: 600px;
+        margin: 0;
+        margin-bottom: 0;
+        background-color: lightgray;
+        padding: 5px 10px 0px 10px;
+    }
+    .content p{
+        margin:25px;
+    }
+    .break hr {
+        margin: 0 0 0 0;
+        border-width: 5px;
+        border-style: solid;
+        opacity: 0.5;
+    }
+
+    .content video {
+        height: 350px;
+        width: 500px;
+        display: block;
+        margin: 0 auto auto auto;
+    }
+
+    .content-width {
+        margin: 0 5% 0 5%;
+    }
+
+    .picture {
+        width: 250px;
+        height: 275px;
+        position: relative;
+        float: left;
+    }
+
+    .tekst {
+        float: left;
+        width: 70%;
+        height: 450px;
+        margin: 2% 1% 1% 1%;
+        overflow: auto;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 1em;
+    }
+    /*-end-*/
 }
 
 /* 
@@ -99,36 +234,405 @@ body {
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    /*body header*/
+    header {
+        height: 80px;
+        margin-top: 0;
+    }
 
-    //CSS
+    header a, footer a {
+        background-color: transparent;
+        text-decoration: none;
+        color: black;
+    }
+
+    header li, footer li {
+        list-style-type: none;
+        float: left;
+        display: block;
+        opacity: 1;
+        font: inherit;
+    }
+
+    .active {
+        background-color: lightgreen;
+    }
+
+    header nav {
+        margin: 30px;
+        float: right;
+        font-weight: 600;
+        justify-content: flex-start;
+        display: flex;
+    }
+
+    header p {
+        float: left;
+        margin: 20px auto 0 3%;
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    .menu {
+        height: 100px;
+        width: 100%;
+        padding: 10px 10px 0px 10px;
+        vertical-align: bottom;
+        font-size: 12px;
+    }
+    .menu > svg{
+        display: none;
+    }
+
+    .grow:hover {
+        transition: 1s;
+        padding: 9px 0px 0px 0px;
+    }
+
+    .menu:hover {
+        background-color: darkgrey;
+        opacity: 0.9;
+        border: hidden;
+        cursor: pointer;
+    }
+
+    .text_input {
+        width: 300px;
+        height: 20px;
+    }
+
+    .button_input {
+        height: 25px;
+        min-width: 80px;
+    }
+    /*-end-*/
+    /*body .content*/
+    .content {
+        height: 600px;
+        margin: 0;
+        margin-bottom: 0;
+        background-color: lightgray;
+        padding: 5px 10px 0px 10px;
+    }
+
+    .content p {
+        margin: 1%;
+    }
+
+    .break hr {
+        margin: 0 0 0 0;
+        border-width: 5px;
+        border-style: solid;
+        opacity: 0.5;
+    }
+
+    .content video {
+        height: 380px;
+        width: 540px;
+        display: block;
+        margin: 0 auto auto auto;
+    }
+
+    .content-width {
+        margin: 0 5% 0 5%;
+    }
+
+    .picture {
+        width: 250px;
+        height: 275px;
+        position: relative;
+        float: left;
+        display: none;
+    }
+
+    .tekst {
+        width: 85%;
+        height: 350px;
+        margin: 2% 1% 1% 1%;
+        overflow: auto;
+        font-size: 13px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 1em;
+    }
+    .content dl{
+        font-size: 13px;
+    }
+    /*-end-*/
 }
-
 /* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-    //CSS
-}
-
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+    /*body header*/
+    header {
+        height: 80px;
+        margin-top: 0;
+    }
 
-    //CSS
+        header a, footer a {
+            background-color: transparent;
+            text-decoration: none;
+            color: black;
+        }
+
+        header li, footer li {
+            list-style-type: none;
+            float: left;
+            display: block;
+            opacity: 1;
+            font: inherit;
+        }
+
+    .active {
+        background-color: lightgreen;
+    }
+
+    header nav {
+        margin: 30px;
+        float: right;
+        font-weight: 600;
+        justify-content: flex-start;
+        display: flex;
+        position: absolute;
+    }
+
+    header p {
+        float: left;
+        margin: 20px auto 0 3%;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .menu {
+        height: 100px;
+        width: 100%;
+        padding: 10px 10px 0px 10px;
+        vertical-align: bottom;
+        font-size: 12px;
+    }
+
+        .menu > svg {
+            display: none;
+        }
+
+    .grow:hover {
+        transition: 1s;
+    }
+
+    .menu:hover {
+        background-color: darkgrey;
+        opacity: 0.9;
+        border: hidden;
+        cursor: pointer;
+    }
+
+    .text_input {
+        width: 200px;
+        height: 20px;
+    }
+
+    .button_input {
+        height: 25px;
+        min-width: 30px;
+        font-size:12px;
+    }
+    /*-end-*/
+    /*body .content*/
+    .content {
+        height: 600px;
+        margin: 0;
+        margin-bottom: 0;
+        background-color: lightgray;
+        padding: 5px 10px 0px 10px;
+    }
+
+        .content p {
+            margin: 1%;
+        }
+
+    .break hr {
+        margin: 0 0 0 0;
+        border-width: 5px;
+        border-style: solid;
+        opacity: 0.5;
+    }
+
+    .content video {
+        height: 220px;
+        width: 330px;
+        display: block;
+        margin: 0 auto auto auto;
+    }
+
+    .content-width {
+        margin: 0 5% 0 5%;
+    }
+
+    .picture {
+        width: 250px;
+        height: 275px;
+        position: relative;
+        float: left;
+        display: none;
+    }
+
+    .tekst {
+        width: 85%;
+        height: 400px;
+        margin: 1% 1% 1% 1%;
+        overflow: auto;
+        font-size: 13px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 1em;
+        display: none;
+    }
+
+    .content dl {
+        font-size: 13px;
+    }
+    /*-end-*/
 }
-
 /* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+    /*body header*/
+    header {
+        height: 80px;
+        margin-top: 0;
+    }
 
-    //CSS
+        header a, footer a {
+            background-color: transparent;
+            text-decoration: none;
+            color: black;
+        }
+
+        header li, footer li {
+            list-style-type: none;
+            float: left;
+            display: block;
+            opacity: 1;
+            font: inherit;
+        }
+
+    .active {
+        background-color: lightgreen;
+    }
+
+    header nav {
+        margin: 30px;
+        float: right;
+        font-weight: 600;
+        justify-content: flex-start;
+        display: flex;
+        position: absolute;
+    }
+
+    header p {
+        float: left;
+        margin: 20px auto 0 3%;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .menu {
+        height: 100px;
+        width: 100%;
+        padding: 10px 10px 0px 10px;
+        vertical-align: bottom;
+        font-size: 12px;
+    }
+
+        .menu > svg {
+            display: none;
+        }
+
+    .grow:hover {
+        transition: 1s;
+    }
+
+    .menu:hover {
+        background-color: darkgrey;
+        opacity: 0.9;
+        border: hidden;
+        cursor: pointer;
+    }
+
+    .text_input {
+        width: 200px;
+        height: 20px;
+    }
+
+    .button_input {
+        height: 25px;
+        min-width: 30px;
+        font-size: 12px;
+    }
+    /*-end-*/
+    /*body .content*/
+    .content {
+        height: 600px;
+        margin: 0;
+        margin-bottom: 0;
+        background-color: lightgray;
+        padding: 5px 10px 0px 10px;
+    }
+
+        .content p {
+            margin: 1%;
+        }
+
+    .break hr {
+        margin: 0 0 0 0;
+        border-width: 5px;
+        border-style: solid;
+        opacity: 0.5;
+    }
+
+    .content video {
+        height: 220px;
+        width: 330px;
+        display: block;
+        margin: 0 auto auto auto;
+    }
+
+    .content-width {
+        margin: 0 5% 0 5%;
+    }
+
+    .picture {
+        width: 250px;
+        height: 275px;
+        position: relative;
+        float: left;
+        display: none;
+    }
+
+    .tekst {
+        width: 85%;
+        height: 400px;
+        margin: 1% 1% 1% 1%;
+        overflow: auto;
+        font-size: 13px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 1em;
+        display: none;
+    }
+
+    .content dl {
+        font-size: 13px;
+    }
+    /*-end-*/
 }
